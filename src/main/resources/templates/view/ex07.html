@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<!-- ~{파일경로 :: 템플릿함수(~{::선택자}) }  -->
+<!-- <th:block  th:replace="~{/include/layout03 :: 함수( ~{:: #first } ) }"> -->
+<th:block  th:replace="~{/include/layout03 :: 함수( ~{:: .second } ) }">
+	
+	<div id="first">
+		아이디 선택자 #
+	</div>
+		
+	<div class="second">
+		클래스 선택자 .
+	</div>
+		
+</th:block>
+
+	<!-- block구문 밖에 배치해야지 코드가 들어감 -->	
+	<script>
+		console.log("이 파일에서만 사용")
+	</script>
